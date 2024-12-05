@@ -2,11 +2,11 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
-public class WordSearch { //good class name
+public class WordSearch { 
     public static void main(String[] args) throws FileNotFoundException {
         Scanner inputScan = new Scanner(System.in);
 
-        String searchString = inputScan.next(); //good variable names
+        String searchString = inputScan.next(); 
         String patternString = inputScan.next(); 
         String fileString = inputScan.next();
 
@@ -14,13 +14,13 @@ public class WordSearch { //good class name
 
         // ---------- logic ---------------
         if (!searchString.equals("search")) {
-            System.out.println("What are you doing?!"); //might be confusing for user
+            System.out.println("Incorrect input, search, needs to be the first argument"); 
         } else {
             File file = new File(fileString);
 
             Scanner fileScanner = new Scanner(file);
 
-            int n = 1; //might be a defect, should maybe start with zero
+            int n = 0; 
             while (fileScanner.hasNextLine()) {
 
                 String line = fileScanner.nextLine(); //text line
